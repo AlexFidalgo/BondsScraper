@@ -1,2 +1,2 @@
 # Bonds
-Scraper to get the yields on brazilian government bonds and stock prices
+Scraper to get stock prices and yields on brazilian government bonds.
