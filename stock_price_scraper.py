@@ -3,12 +3,13 @@ from selenium.webdriver.common.by import By
 from PIL import Image
 import time
 
+stock = 'abcb4' # Acronym for the stock of interest
 min_price = 16.6 # Minimum price to trigger a warning to the user
 sleep_time = 300 # Number of seconds between each iteration
 max_i = 60 # Number of maximum iterations
 
 # URL of the Google search results page
-url = 'https://www.google.com/search?q=abcb4'
+url = f'https://www.google.com/search?q={stock}'
 
 i = 0
 
