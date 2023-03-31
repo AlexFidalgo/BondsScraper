@@ -32,7 +32,4 @@ while 1:
     # Quit the webdriver instance
     driver.quit()
     
-    time.sleep(5)
-    
-
-
+    time.sleep(300)
