@@ -6,7 +6,9 @@ import time
 # URL of the Google search results page
 url = 'https://www.google.com/search?q=abcb4'
 
-while 1:
+i = 0
+
+while i < 60:
     
     # Initialize a Chrome webdriver instance
     driver = webdriver.Chrome()
@@ -33,3 +35,5 @@ while 1:
     driver.quit()
     
     time.sleep(300)
+    
+    i = i + 1
