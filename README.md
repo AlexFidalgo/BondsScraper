@@ -1,2 +1,2 @@
-# tesouro
-Scraper to get the yields on brazilian government bonds
+# Bonds
+Scraper to get the yields on brazilian government bonds and stock prices
