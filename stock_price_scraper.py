@@ -3,12 +3,16 @@ from selenium.webdriver.common.by import By
 from PIL import Image
 import time
 
+min_price = 16.6 # Minimum price to trigger a warning to the user
+sleep_time = 300 # Number of seconds between each iteration
+max_i = 60 # Number of maximum iterations
+
 # URL of the Google search results page
 url = 'https://www.google.com/search?q=abcb4'
 
 i = 0
 
-while i < 60:
+while i < max_i:
     
     # Initialize a Chrome webdriver instance
     driver = webdriver.Chrome()
@@ -26,14 +30,14 @@ while i < 60:
     print(price)
     
     # Check the bond price
-    if float(price.replace(",", ".")) < 16.5:
-        # Open and show the image if the price is less than 16.8
+    if float(price.replace(",", ".")) < min_price:
+        # Open and show the image if the price is less than min_price
         img = Image.open('stock_dip.jpg')
         img.show()
     
     # Quit the webdriver instance
     driver.quit()
     
-    time.sleep(300)
+    time.sleep(sleep_time)
     
     i = i + 1
